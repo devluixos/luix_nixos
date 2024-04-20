@@ -15,3 +15,26 @@ setting up /etc...
 reloading user units for luix...
 restarting sysinit-reactivation.target
 2024-04-20 23:28:32 - Rebuild successful.
+Checking style in 3 files using 16 threads.
+
+
+Congratulations! Your code complies with the Alejandra style.
+
+👏 Special thanks to Fabio Leimgruber for being a sponsor of Alejandra!
+warning: Git tree '/home/luix/dotfiles' is dirty
+building the system configuration...
+warning: Git tree '/home/luix/dotfiles' is dirty
+trace: warning: The option `services.xserver.xkbVariant' defined in `/nix/store/89ybm784b98fdlj17zamz7i0kijgf627-source/nixos/configuration.nix' has been renamed to `services.xserver.xkb.variant'.
+trace: warning: The option `services.xserver.layout' defined in `/nix/store/89ybm784b98fdlj17zamz7i0kijgf627-source/nixos/configuration.nix' has been renamed to `services.xserver.xkb.layout'.
+activating the configuration...
+setting up /etc...
+reloading user units for luix...
+restarting sysinit-reactivation.target
+2024-04-20 23:31:10 - Rebuild successful.
+Checking style in 3 files using 16 threads.
+
+
+Congratulations! Your code complies with the Alejandra style.
+
+⭐ If Alejandra is useful to you, please add your star to the repository.
+Thank you! https://github.com/kamadorueda/alejandra
