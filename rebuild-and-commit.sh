@@ -27,7 +27,7 @@ else
     gen=$(nixos-rebuild list-generations | grep current | cut -d' ' -f2-)
     git commit -m "Rebuild at generation: $gen"
     echo "Commit successful. Generation: $gen."
-    git push
+    git push origin main
   else
     echo "$(date '+%Y-%m-%d %H:%M:%S') - Rebuild failed. Check $DOTFILES_DIR/nixos-switch.log for details." >> $DOTFILES_DIR/nixos-switch.log
     cat $DOTFILES_DIR/nixos-switch.log | grep --color=always error
