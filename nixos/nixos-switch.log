@@ -1,12 +1,205 @@
 warning: Git tree '/home/luix/dotfiles' is dirty
-warning: creating lock file '/home/luix/dotfiles/nixos/flake.lock'
-warning: Git tree '/home/luix/dotfiles' is dirty
 building the system configuration...
 warning: Git tree '/home/luix/dotfiles' is dirty
-trace: warning: The option `services.xserver.xkbVariant' defined in `/nix/store/1az43immfiqf6l5r3ymg3x1zva4x1kck-source/nixos/configuration.nix' has been renamed to `services.xserver.xkb.variant'.
-trace: warning: The option `services.xserver.layout' defined in `/nix/store/1az43immfiqf6l5r3ymg3x1zva4x1kck-source/nixos/configuration.nix' has been renamed to `services.xserver.xkb.layout'.
+trace: warning: The option `services.xserver.xkbVariant' defined in `/nix/store/yz4p59m33z1w64wacfdx5mk0958r9fdb-source/nixos/configuration.nix' has been renamed to `services.xserver.xkb.variant'.
+trace: warning: The option `services.xserver.layout' defined in `/nix/store/yz4p59m33z1w64wacfdx5mk0958r9fdb-source/nixos/configuration.nix' has been renamed to `services.xserver.xkb.layout'.
 activating the configuration...
 setting up /etc...
 reloading user units for luix...
 restarting sysinit-reactivation.target
-the following new units were started: sysinit-reactivation.target, systemd-tmpfiles-resetup.service
+Checking style in 3 files using 16 threads.
+
+Formatted: ./hardware-configuration.nix
+Formatted: ./flake.nix
+Formatted: ./configuration.nix
+
+Success! 3 files were formatted.
+
+👏 Special thanks to Raphael Megzari for being a sponsor of Alejandra!
+diff --git a/nixos/configuration.nix b/nixos/configuration.nix
+index 1d9cae6..d00f5b6 100644
+--- a/nixos/configuration.nix
++++ b/nixos/configuration.nix
+@@ -4,3 +3,0 @@
+-
+-{ config, pkgs, inputs, ... }:
+-
+@@ -8,4 +5,9 @@
+-  imports =
+-    [ # Include the results of the hardware scan.
+-      ./hardware-configuration.nix
+-    ];
++  config,
++  pkgs,
++  inputs,
++  ...
++}: {
++  imports = [
++    # Include the results of the hardware scan.
++    ./hardware-configuration.nix
++  ];
+@@ -35 +37 @@
+-  services.xserver.videoDrivers = [ "amdgpu" ];
++  services.xserver.videoDrivers = ["amdgpu"];
+@@ -80 +82 @@
+-    extraGroups = [ "networkmanager" "wheel" ];
++    extraGroups = ["networkmanager" "wheel"];
+@@ -83 +85 @@
+-    #  thunderbird
++      #  thunderbird
+@@ -91 +93 @@
+-	  "electron-25.9.0"
++    "electron-25.9.0"
+@@ -114 +116 @@
+-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
++  nix.settings.experimental-features = ["nix-command" "flakes"];
+@@ -147 +148,0 @@
+-
+diff --git a/nixos/flake.nix b/nixos/flake.nix
+index e74f57a..01708e0 100644
+--- a/nixos/flake.nix
++++ b/nixos/flake.nix
+@@ -4,3 +4,3 @@
+-    inputs = {
+-        nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+-        home-manager.url = "github:nix-community/home-manager";
++  inputs = {
++    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
++    home-manager.url = "github:nix-community/home-manager";
+@@ -8 +8 @@
+-        # ...
++    # ...
+@@ -10 +10 @@
+-        nix-citizen.url = "github:LovingMelody/nix-citizen";
++    nix-citizen.url = "github:LovingMelody/nix-citizen";
+@@ -12,4 +12,4 @@
+-        # Optional - updates underlying without waiting for nix-citizen to update
+-        nix-gaming.url = "github:fufexan/nix-gaming";
+-        nix-citizen.inputs.nix-gaming.follows = "nix-gaming";
+-    };
++    # Optional - updates underlying without waiting for nix-citizen to update
++    nix-gaming.url = "github:fufexan/nix-gaming";
++    nix-citizen.inputs.nix-gaming.follows = "nix-gaming";
++  };
+@@ -17,4 +17,8 @@
+-    outputs = {self, nixpkgs, ...}@inputs: {
+-        # NixOS Setup
+-        nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+-            specialArgs = {inherit inputs;};
++  outputs = {
++    self,
++    nixpkgs,
++    ...
++  } @ inputs: {
++    # NixOS Setup
++    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
++      specialArgs = {inherit inputs;};
+@@ -22,5 +26,5 @@
+-            modules = [
+-                ./configuration.nix
+-                # ....
+-            ];
+-        };
++      modules = [
++        ./configuration.nix
++        # ....
++      ];
++    };
+@@ -28,6 +32,6 @@
+-        # HomeManager...
+-        homeConfigurations.HOST = inputs.home-manager.lib.homeManagerConfiguration {
+-            pkgs = import nixpkgs {
+-                system = "x86_64-linux";
+-                config.allowUnfree = true;
+-            };
++    # HomeManager...
++    homeConfigurations.HOST = inputs.home-manager.lib.homeManagerConfiguration {
++      pkgs = import nixpkgs {
++        system = "x86_64-linux";
++        config.allowUnfree = true;
++      };
+@@ -35,6 +39,5 @@
+-            extraSpecialArgs = {inherit inputs;};
+-            modules = [
+-                ./home.nix
+-                # ...
+-             ];
+-        };
++      extraSpecialArgs = {inherit inputs;};
++      modules = [
++        ./home.nix
++        # ...
++      ];
+@@ -42 +45,2 @@
+-}
+\ No newline at end of file
++  };
++}
+diff --git a/nixos/hardware-configuration.nix b/nixos/hardware-configuration.nix
+index 83ea473..28fdb59 100644
+--- a/nixos/hardware-configuration.nix
++++ b/nixos/hardware-configuration.nix
+@@ -4,2 +3,0 @@
+-{ config, lib, pkgs, modulesPath, ... }:
+-
+@@ -7,3 +5,9 @@
+-  imports =
+-    [ (modulesPath + "/installer/scan/not-detected.nix")
+-    ];
++  config,
++  lib,
++  pkgs,
++  modulesPath,
++  ...
++}: {
++  imports = [
++    (modulesPath + "/installer/scan/not-detected.nix")
++  ];
+@@ -11,4 +15,4 @@
+-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
+-  boot.initrd.kernelModules = [ "amdgpu" ];
+-  boot.kernelModules = [ "kvm-amd" ];
+-  boot.extraModulePackages = [ ];
++  boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod"];
++  boot.initrd.kernelModules = ["amdgpu"];
++  boot.kernelModules = ["kvm-amd"];
++  boot.extraModulePackages = [];
+@@ -16,4 +20,4 @@
+-  fileSystems."/" =
+-    { device = "/dev/disk/by-uuid/733ba3d8-4860-4c77-9cc1-0db5acb6b726";
+-      fsType = "ext4";
+-    };
++  fileSystems."/" = {
++    device = "/dev/disk/by-uuid/733ba3d8-4860-4c77-9cc1-0db5acb6b726";
++    fsType = "ext4";
++  };
+@@ -21,5 +25,5 @@
+-  fileSystems."/boot" =
+-    { device = "/dev/disk/by-uuid/7BFD-F291";
+-      fsType = "vfat";
+-      options = [ "fmask=0022" "dmask=0022" ];
+-    };
++  fileSystems."/boot" = {
++    device = "/dev/disk/by-uuid/7BFD-F291";
++    fsType = "vfat";
++    options = ["fmask=0022" "dmask=0022"];
++  };
+@@ -27 +31 @@
+-  swapDevices = [ ];
++  swapDevices = [];
+warning: Git tree '/home/luix/dotfiles' is dirty
+building the system configuration...
+warning: Git tree '/home/luix/dotfiles' is dirty
+trace: warning: The option `services.xserver.xkbVariant' defined in `/nix/store/6028xghbf1ypp145wfzj754ichji4fif-source/nixos/configuration.nix' has been renamed to `services.xserver.xkb.variant'.
+trace: warning: The option `services.xserver.layout' defined in `/nix/store/6028xghbf1ypp145wfzj754ichji4fif-source/nixos/configuration.nix' has been renamed to `services.xserver.xkb.layout'.
+activating the configuration...
+setting up /etc...
+reloading user units for luix...
+restarting sysinit-reactivation.target
+2024-04-20 23:15:15 - Rebuild successful.
+Checking style in 3 files using 16 threads.
+
+
+Congratulations! Your code complies with the Alejandra style.
+
+👏 Special thanks to GuangTao Zhang for being a sponsor of Alejandra!

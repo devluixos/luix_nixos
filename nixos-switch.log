@@ -1,1 +1,2 @@
-error: 'flake.nix' file of flake 'path:/etc/nixos?lastModified=1713646289&narHash=sha256-vUOO08V1sf6MM0%2BAnPkldO4Gm7Jy1bVfprX90DS6hJI%3D' escapes from '/nix/store/8p5h1fmlrdhf44g62hwi0gwv78ba8cp7-source'
+path '/home/luix/dotfiles' does not contain a 'flake.nix', searching up
+error: path '/home/luix/dotfiles' is not part of a flake (neither it nor its parent directories contain a 'flake.nix' file)
