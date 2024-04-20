@@ -38,12 +38,6 @@ This script automates the process of rebuilding NixOS and committing the changes
 5. If the rebuild is successful, the script stages all changes, commits them with a message indicating the current NixOS generation, and pushes the commit to the remote repository.
 6. If the rebuild fails, the script logs the failure and exits with a non-zero status code.
 
-## Packages
-
-The packages installed by the NixOS configuration are defined in the `flake.nix` and `configuration.nix` files. Here is a list of the packages:
-
-(Replace this text with a list of the packages defined in `flake.nix` and `configuration.nix`)
-
 ## Usage
 
 To use this script, simply run it from the terminal:
