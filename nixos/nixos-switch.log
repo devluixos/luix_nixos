@@ -5,3 +5,13 @@ Checking style in 3 files using 16 threads.
 Congratulations! Your code complies with the Alejandra style.
 
 👏 Special thanks to Daniel Salazar for being a sponsor of Alejandra!
+warning: Git tree '/home/luix/dotfiles' is dirty
+building the system configuration...
+warning: Git tree '/home/luix/dotfiles' is dirty
+trace: warning: The option `services.xserver.xkbVariant' defined in `/nix/store/5bp4pvpkg4rarmw0bsglvn7b9jgr5qr3-source/nixos/configuration.nix' has been renamed to `services.xserver.xkb.variant'.
+trace: warning: The option `services.xserver.layout' defined in `/nix/store/5bp4pvpkg4rarmw0bsglvn7b9jgr5qr3-source/nixos/configuration.nix' has been renamed to `services.xserver.xkb.layout'.
+activating the configuration...
+setting up /etc...
+reloading user units for luix...
+restarting sysinit-reactivation.target
+2024-04-20 23:28:32 - Rebuild successful.
