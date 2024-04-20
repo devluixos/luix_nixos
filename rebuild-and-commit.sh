@@ -7,6 +7,9 @@ DOTFILES_DIR="/home/luix/dotfiles/nixos"
 echo "Navigating to dotfiles/nixos repository..."
 pushd $DOTFILES_DIR  # Change to the correct directory containing flake.nix
 
+# Clear the old log content
+echo "" > $DOTFILES_DIR/nixos-switch.log
+
 echo "Formatting Nix files..."
 alejandra . &>> $DOTFILES_DIR/nixos-switch.log
 
@@ -24,6 +27,7 @@ else
     gen=$(nixos-rebuild list-generations | grep current | cut -d' ' -f2-)
     git commit -m "Rebuild at generation: $gen"
     echo "Commit successful. Generation: $gen."
+    git push
   else
     echo "$(date '+%Y-%m-%d %H:%M:%S') - Rebuild failed. Check $DOTFILES_DIR/nixos-switch.log for details." >> $DOTFILES_DIR/nixos-switch.log
     cat $DOTFILES_DIR/nixos-switch.log | grep --color=always error
