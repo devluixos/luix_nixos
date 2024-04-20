@@ -71,7 +71,7 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # mount second drive to home/luix/drive
+  # mount second drive to home/
   fileSystems."/home/luix/drive" = {
     device = "/dev/nvme1n1p1";
     fsType = "auto";
