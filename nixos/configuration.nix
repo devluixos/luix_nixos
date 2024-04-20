@@ -120,6 +120,12 @@
     "fs.file-max" = 524288;
   };
 
+  networking = {
+    extraHosts = ''
+      127.0.0.1 modules-cdn.eac-prod.on.epicgames.com
+    '';
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
