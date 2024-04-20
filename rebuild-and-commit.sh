@@ -1,6 +1,25 @@
 #!/usr/bin/env bash
 set -e  # Exit on error
 
+# The directory containing the source .nix files
+SOURCE_DIR="/home/luix/dotfiles/nixos"
+
+# The target directory for the symlinks
+TARGET_DIR="/etc/nixos"
+
+# For each .nix file in the source directory
+for file in $SOURCE_DIR/*.nix; do
+  # The name of the symlink in the target directory
+  symlink="$TARGET_DIR/$(basename $file)"
+
+  # If the symlink does not exist or points to a non-existent file
+  if [ ! -e $symlink ]; then
+    # Create the symlink
+    ln -s $file $symlink
+    echo "Created symlink: $symlink"
+  fi
+done
+
 # Use absolute path
 DOTFILES_DIR="/home/luix/dotfiles/nixos"
 GIT_DIR="/home/luix/dotfiles"
