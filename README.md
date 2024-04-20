@@ -25,9 +25,6 @@ To use this script, simply run it from the terminal:
 /home/luix/dotfiles/rebuild-and-commit.sh
 ```
 
-Sure, here's the markdown version of the README:
-
-```markdown
 # Rebuild and Commit Script
 
 This script automates the process of rebuilding NixOS and committing the changes to a Git repository. It is designed to be used with a NixOS configuration managed in a Git repository.
