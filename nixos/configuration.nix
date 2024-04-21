@@ -111,6 +111,7 @@
     reaper
     inputs.nix-citizen.packages.${system}.star-citizen
     synology-drive-client
+    atuin
   ];
 
   # STAR CITIZEN settings
