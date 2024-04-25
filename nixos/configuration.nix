@@ -106,13 +106,13 @@
     vscode
     steam
     discord
-    davinci-resolve
     nodejs_21
     reaper
     inputs.nix-citizen.packages.${system}.star-citizen
     synology-drive-client
     atuin
     teams-for-linux
+    davinci-resolve
   ];
 
   # STAR CITIZEN settings
