@@ -47,6 +47,10 @@
     driSupport = true;
   };
 
+  hardware.opengl.extraPackages = with pkgs; [
+    rocmPackages.clr.icd
+  ];
+
   # Configure keymap in X11
   services.xserver = {
     layout = "ch";
