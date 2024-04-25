@@ -113,6 +113,8 @@
     atuin
     teams-for-linux
     davinci-resolve
+    davinci-resolve-studio
+    amdgpu_top
   ];
 
   # STAR CITIZEN settings
@@ -143,7 +145,7 @@
   # };
 
   # List services that you want to enable:
-
+  services.flatpak.enable = true;
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
