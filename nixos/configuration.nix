@@ -115,6 +115,7 @@
     davinci-resolve
     davinci-resolve-studio
     amdgpu_top
+    clinfo
   ];
 
   # STAR CITIZEN settings
