@@ -87,6 +87,7 @@
     extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
       firefox
+      davinci-resolve
       #  thunderbird
     ];
   };
@@ -112,7 +113,6 @@
     synology-drive-client
     atuin
     teams-for-linux
-    davinci-resolve
   ];
 
   # STAR CITIZEN settings
