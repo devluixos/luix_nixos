@@ -39,6 +39,14 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
+  hardware.opengl = {
+    # Mesa
+    enable = true;
+
+    # Vulkan
+    driSupport = true;
+  };
+
   # Configure keymap in X11
   services.xserver = {
     layout = "ch";
@@ -136,11 +144,6 @@
       127.0.0.1 modules-cdn.eac-prod.on.epicgames.com
     '';
   };
-
-  hardware.opengl.extraPackages = with pkgs; [
-    rocm-opencl-icd
-    rocm-runtime
-  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
