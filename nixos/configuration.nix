@@ -129,6 +129,7 @@
     amdgpu_top
     clinfo
     vlc
+    ffmpeg
   ];
 
   # STAR CITIZEN settings
