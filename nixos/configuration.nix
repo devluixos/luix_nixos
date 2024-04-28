@@ -128,6 +128,7 @@
     davinci-resolve-studio
     amdgpu_top
     clinfo
+    vlc
   ];
 
   # STAR CITIZEN settings
