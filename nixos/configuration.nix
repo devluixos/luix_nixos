@@ -131,6 +131,7 @@
     vlc
     ffmpeg
     spotify
+    audacity
   ];
 
   # STAR CITIZEN settings
