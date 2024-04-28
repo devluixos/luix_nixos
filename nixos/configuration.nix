@@ -130,6 +130,7 @@
     clinfo
     vlc
     ffmpeg
+    spotify
   ];
 
   # STAR CITIZEN settings
