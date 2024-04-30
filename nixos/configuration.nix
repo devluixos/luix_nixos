@@ -132,6 +132,7 @@
     ffmpeg
     spotify
     audacity
+    inkscape
   ];
 
   # STAR CITIZEN settings
