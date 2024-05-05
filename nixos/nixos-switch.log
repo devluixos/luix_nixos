@@ -366,3 +366,12 @@ Success! 1 file was formatted.
 
 👏 Special thanks to Daniel Salazar for being a sponsor of Alejandra!
 2024-05-05 12:46:59 - Rebuild successful.
+Checking style in 3 files using 16 threads.
+
+Formatted: ./configuration.nix
+
+Success! 1 file was formatted.
+
+👏 Special thanks to Fabio Leimgruber for being a sponsor of Alejandra!
+setting up /etc...
+2024-05-05 12:48:40 - Rebuild successful.

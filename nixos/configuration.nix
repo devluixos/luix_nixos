@@ -45,7 +45,6 @@
 
     # Vulkan
     driSupport = true;
-    driSupport32Bit = true;
   };
 
   hardware.opengl.extraPackages = with pkgs; [
@@ -89,9 +88,6 @@
     device = "/dev/nvme1n1p1";
     fsType = "auto";
   };
-  # steam error fix:
-  hardware.opengl.driSupport32Bit = true;
-  hardware.pulseaudio.support32Bit = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.luix = {
@@ -141,6 +137,10 @@
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
+
+  # steam error fix:
+  hardware.opengl.driSupport32Bit = true;
+  hardware.pulseaudio.support32Bit = true;
 
   # STAR CITIZEN settings
   nix.settings = {
