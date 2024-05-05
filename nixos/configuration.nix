@@ -131,6 +131,7 @@
     audacity
     inkscape
     mangohud
+    protonvpn-gui
   ];
 
   #Steam Settings
