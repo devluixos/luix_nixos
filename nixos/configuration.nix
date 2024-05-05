@@ -45,6 +45,7 @@
 
     # Vulkan
     driSupport = true;
+    driSupport32Bit = true;
   };
 
   hardware.opengl.extraPackages = with pkgs; [
@@ -133,7 +134,13 @@
     spotify
     audacity
     inkscape
+    mangohud
   ];
+
+  #Steam Settings
+  programs.steam.enable = true;
+  programs.steam.gamescopeSession.enable = true;
+  programs.gamemode.enable = true;
 
   # STAR CITIZEN settings
   nix.settings = {
