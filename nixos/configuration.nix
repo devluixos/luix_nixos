@@ -37,7 +37,7 @@
     description = "Symlink Synology Drive to Home Directory";
     wantedBy = ["multi-user.target"];
     script = ''
-      ln -sf /run/media/luix/fb4aa704-4e49-4e13-b1c3-6bb57030fa5e/ /home/luix/SynologyDrive
+      ln -sf /run/media/luix/fb4aa704-4e49-4e13-b1c3-6bb57030fa5e/SynologyDrive /home/luix/drive/SynologyDrive
     '';
     serviceConfig.Type = "oneshot";
     serviceConfig.RemainAfterExit = true;
