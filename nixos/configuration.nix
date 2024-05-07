@@ -32,17 +32,6 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
 
-  #Symlink for Drive
-  systemd.services.synology-symlink = {
-    description = "Symlink Synology Drive to Home Directory";
-    wantedBy = ["multi-user.target"];
-    script = ''
-      ln -sf /run/media/luix/fb4aa704-4e49-4e13-b1c3-6bb57030fa5e/SynologyDrive /home/luix/drive/SynologyDrive
-    '';
-    serviceConfig.Type = "oneshot";
-    serviceConfig.RemainAfterExit = true;
-  };
-
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   services.xserver.videoDrivers = ["amdgpu"];
@@ -107,6 +96,17 @@
     script = ''
       chown luix:luix /home/luix/drive
       chmod 755 /home/luix/drive
+    '';
+    serviceConfig.Type = "oneshot";
+    serviceConfig.RemainAfterExit = true;
+  };
+
+  #Symlink for Drive
+  systemd.services.synology-symlink = {
+    description = "Symlink Synology Drive to Home Directory";
+    wantedBy = ["multi-user.target"];
+    script = ''
+      ln -sf /run/media/luix/fb4aa704-4e49-4e13-b1c3-6bb57030fa5e/SynologyDrive /home/luix/drive/SynologyDrive
     '';
     serviceConfig.Type = "oneshot";
     serviceConfig.RemainAfterExit = true;
