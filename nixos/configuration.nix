@@ -94,7 +94,7 @@
     after = ["local-fs.target"];
     wantedBy = ["multi-user.target"];
     script = ''
-      chown luix:luix /home/luix/drive
+      chown luix:users /home/luix/drive
       chmod 755 /home/luix/drive
     '';
     serviceConfig.Type = "oneshot";
