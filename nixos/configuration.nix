@@ -85,20 +85,8 @@
 
   # mount second drive to home/
   fileSystems."/home/luix/drive" = {
-    device = "/dev/nvme1n1p1";
+    device = "/dev/nvme0n1p1";
     fsType = "auto";
-  };
-
-  systemd.services.adjustMountPermissions = {
-    description = "Adjust permissions for /home/luix/drive";
-    after = ["local-fs.target"];
-    wantedBy = ["multi-user.target"];
-    script = ''
-      chown luix:users /home/luix/drive
-      chmod 755 /home/luix/drive
-    '';
-    serviceConfig.Type = "oneshot";
-    serviceConfig.RemainAfterExit = true;
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
