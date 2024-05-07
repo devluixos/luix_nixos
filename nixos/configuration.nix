@@ -132,6 +132,7 @@
     inkscape
     mangohud
     protonvpn-gui
+    gpu-screen-recorder-gtk
   ];
 
   #Steam Settings
