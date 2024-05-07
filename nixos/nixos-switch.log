@@ -416,3 +416,16 @@ Congratulations! Your code complies with the Alejandra style.
 👏 Special thanks to Daniel Salazar for being a sponsor of Alejandra!
 setting up /etc...
 2024-05-07 19:42:49 - Rebuild successful.
+Checking style in 3 files using 16 threads.
+
+
+Failed! 1 error found at:
+- ./configuration.nix: unexpected TOKEN_COMMA at 2818..2819, wanted any of [TOKEN_PAREN_OPEN, TOKEN_REC, TOKEN_CURLY_B_OPEN, TOKEN_SQUARE_B_OPEN, TOKEN_DYNAMIC_START, TOKEN_STRING_START, TOKEN_IDENT]
+Checking style in 3 files using 16 threads.
+
+
+Congratulations! Your code complies with the Alejandra style.
+
+👏 Special thanks to Daniel Salazar for being a sponsor of Alejandra!
+setting up /etc...
+2024-05-07 19:46:33 - Rebuild successful.
