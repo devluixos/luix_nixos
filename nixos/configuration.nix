@@ -85,7 +85,7 @@
 
   # mount second drive to home/
   fileSystems."/home/luix/drive" = {
-    device = "/dev/nvme0n1p1";
+    device = "/dev/nvme1n1p1";
     fsType = "auto";
   };
 
