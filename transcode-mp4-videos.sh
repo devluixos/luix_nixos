@@ -11,3 +11,7 @@ mkdir -p "$DIR/transcoded"
 for i in "$DIR"/*.mp4; do
     ffmpeg -i "$i" -vcodec mjpeg -q:v 2 -acodec pcm_s16be -q:a 0 -f mov "$DIR/transcoded/${i##*/}"
 done
+
+for i in "$DIR"/*.mov; do
+    ffmpeg -i "$i" -vcodec mjpeg -q:v 2 -acodec pcm_s16be -q:a 0 -f mov "$DIR/transcoded/${i##*/}"
+done
