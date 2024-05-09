@@ -135,6 +135,7 @@
     gpu-screen-recorder-gtk
     lutris
     clipgrab
+    unityhub
   ];
 
   #Steam Settings
