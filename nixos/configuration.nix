@@ -136,6 +136,7 @@
     lutris
     clipgrab
     unityhub
+    obs-studio
   ];
 
   #Steam Settings
