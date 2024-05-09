@@ -134,6 +134,7 @@
     protonvpn-gui
     gpu-screen-recorder-gtk
     lutris
+    clipgrab
   ];
 
   #Steam Settings
