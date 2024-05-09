@@ -133,6 +133,7 @@
     mangohud
     protonvpn-gui
     gpu-screen-recorder-gtk
+    lutris
   ];
 
   #Steam Settings
