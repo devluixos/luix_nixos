@@ -137,6 +137,7 @@
     clipgrab
     unityhub
     obs-studio
+    chromium
   ];
 
   #Steam Settings
