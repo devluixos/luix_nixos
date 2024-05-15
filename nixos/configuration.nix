@@ -139,6 +139,7 @@
     obs-studio
     chromium
     zoom
+    openscad
   ];
 
   #Steam Settings
