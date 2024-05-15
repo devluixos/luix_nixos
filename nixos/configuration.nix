@@ -138,6 +138,7 @@
     unityhub
     obs-studio
     chromium
+    zoom
   ];
 
   #Steam Settings
