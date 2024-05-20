@@ -140,6 +140,7 @@
     chromium
     zoom
     openscad
+    libreoffice
   ];
 
   #Steam Settings
