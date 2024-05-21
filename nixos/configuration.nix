@@ -141,6 +141,7 @@
     zoom
     openscad
     libreoffice
+    cura
   ];
 
   #Steam Settings
