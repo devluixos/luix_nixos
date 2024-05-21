@@ -142,6 +142,7 @@
     openscad
     libreoffice
     cura
+    gimp
   ];
 
   #Steam Settings
