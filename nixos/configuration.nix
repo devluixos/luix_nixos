@@ -143,6 +143,7 @@
     libreoffice
     cura
     gimp
+    sweethome3d.application
   ];
 
   #Steam Settings
