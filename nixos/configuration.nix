@@ -138,7 +138,7 @@
     unityhub
     obs-studio
     chromium
-    zoom
+    zoom-us
     openscad
     libreoffice
     cura
