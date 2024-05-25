@@ -145,6 +145,7 @@
     gimp
     sweethome3d.application
     appimage-run
+    virtualbox
   ];
 
   #Steam Settings
