@@ -92,8 +92,6 @@
   # VM Box
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = ["user-with-access-to-virtualbox"];
-  virtualisation.virtualbox.guest.enable = true;
-  virtualisation.virtualbox.guest.x11 = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.luix = {
