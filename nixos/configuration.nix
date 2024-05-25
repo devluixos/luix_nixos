@@ -144,6 +144,7 @@
     cura
     gimp
     sweethome3d.application
+    appimage-run
   ];
 
   #Steam Settings
