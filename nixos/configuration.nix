@@ -150,8 +150,9 @@
     sweethome3d.application
     appimage-run
     virtualbox
-    minecraft
+    #    minecraft
     openjdk11
+    prismlauncher
   ];
 
   #Steam Settings
