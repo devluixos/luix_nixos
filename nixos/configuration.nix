@@ -151,8 +151,7 @@
     appimage-run
     virtualbox
     minecraft
-    lwjgl
-    lwjgl-bin
+    openjdk11
   ];
 
   #Steam Settings
