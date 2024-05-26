@@ -150,6 +150,7 @@
     sweethome3d.application
     appimage-run
     virtualbox
+    minecraft
   ];
 
   #Steam Settings
