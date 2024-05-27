@@ -151,6 +151,7 @@
     appimage-run
     virtualbox
     #    minecraft
+    openjdk17-bootstrap
     openjdk11
     prismlauncher
     openjdk17
