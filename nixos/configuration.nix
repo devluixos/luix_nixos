@@ -153,6 +153,7 @@
     #    minecraft
     openjdk11
     prismlauncher
+    openjdk17
   ];
 
   #Steam Settings
