@@ -155,6 +155,7 @@
     openjdk11
     prismlauncher
     openjdk17
+    legendary-gl
   ];
 
   #Steam Settings
