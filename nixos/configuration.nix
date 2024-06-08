@@ -157,6 +157,7 @@
     openjdk17
     legendary-gl
     unrar
+    python3
   ];
 
   #Steam Settings
