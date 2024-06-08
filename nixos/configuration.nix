@@ -118,6 +118,7 @@
     obsidian
     vscode
     steam
+    steam-run
     discord
     nodejs_21
     reaper
