@@ -156,6 +156,7 @@
     prismlauncher
     openjdk17
     legendary-gl
+    unrar
   ];
 
   #Steam Settings
