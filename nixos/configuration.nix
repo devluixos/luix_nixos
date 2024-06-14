@@ -159,6 +159,7 @@
     legendary-gl
     unrar
     python3
+    mediawriter
   ];
 
   #Steam Settings
